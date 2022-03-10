@@ -11,7 +11,44 @@
                   </div>
               </div>
               <div class="card-body">
-                  Pengguna
+                  <div class="row">
+                      <div class="col mb-3 ">
+                          <a href="" class="btn btn-primary float-right">
+                              <i class="fa fa-user-plus"></i> Tambah Pengguna</a>
+                      </div>
+                  </div>
+                  <table id="example1" class="table table-bordered table-striped">
+                      <thead>
+                          <tr>
+                              <th>No</th>
+                              <th>Nama</th>
+                              <th>Username</th>
+                              <th>Level</th>
+                              <th>Aksi</th>
+                          </tr>
+                      </thead>
+                      <tbody>
+                          <?php
+                            include "koneksi.php";
+                            $no = 1;
+                            $sql = mysqli_query($koneksi, "SELECT * FROM pengguna");
+                            while ($data = mysqli_fetch_array($sql)) {
+                                echo "
+                                    <tr>
+                                    <td>$no</td>
+                                    <td>$data[nama]</td>
+                                    <td>$data[username]</td>
+                                    <td>$data[level]</td>
+                                    <td><div class='btn-group'>
+                                    <a href='#' class='btn btn-sm btn-success' title='ubah data'><i class='fa fa-pencil-alt'></i></a>
+                                    <a href='#' class='btn btn-sm btn-danger' title='hapus data'><i class='fa fa-trash-alt'></i></a>
+                                </div></td>
+                                </tr>";
+                                $no++;
+                            }
+                            ?>
+
+                      </tbody>
               </div>
               <!-- /.card-body -->
               <!-- <div class="card-footer">
