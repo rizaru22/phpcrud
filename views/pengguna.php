@@ -13,7 +13,7 @@
               <div class="card-body">
                   <div class="row">
                       <div class="col mb-3 ">
-                          <a href="" class="btn btn-primary float-right">
+                          <a href="index.php?halaman=tambah_pengguna" class="btn btn-primary float-right">
                               <i class="fa fa-user-plus"></i> Tambah Pengguna</a>
                       </div>
                   </div>
