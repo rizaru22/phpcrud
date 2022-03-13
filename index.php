@@ -137,6 +137,9 @@
                         case "tambah_pengguna":
                             include("views/form_pengguna.php");
                             break;
+                        case "edit_pengguna":
+                            include("views/form_edit_pengguna.php");
+                            break;
                     }
                 } else {
                     include("views/dashboard.php");
