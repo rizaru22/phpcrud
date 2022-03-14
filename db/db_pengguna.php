@@ -16,6 +16,9 @@ if ($proses == 'insert') {
     $id = $_POST['id'];
 
     mysqli_query($koneksi, "UPDATE pengguna SET nama='$nama', username='$username',level='$level' WHERE id='$id'");
+} else if ($proses == 'hapus') {
+    $id = $_GET['id'];
+    mysqli_query($koneksi, "DELETE FROM pengguna WHERE id='$id'");
 }
 
 header("location:../index.php?halaman=pengguna");
